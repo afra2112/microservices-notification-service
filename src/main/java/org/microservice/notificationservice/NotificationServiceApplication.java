@@ -3,10 +3,12 @@ package org.microservice.notificationservice;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+import org.springframework.retry.annotation.EnableRetry;
 import org.springframework.scheduling.annotation.EnableAsync;
 
 @SpringBootApplication
 @EnableAsync
+@EnableRetry
 @EnableMongoRepositories(basePackages = "org.microservice.notificationservice.repository")
 public class NotificationServiceApplication {
 
